@@ -1,0 +1,8 @@
+$(function(){
+	var mydate = new Date();
+	var time=mydate.toLocaleString();
+	$('.time span').text(time);
+
+
+
+});

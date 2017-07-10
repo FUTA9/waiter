@@ -1,0 +1,2 @@
+var mydate = new Date();
+var t=mydate.toLocaleString();

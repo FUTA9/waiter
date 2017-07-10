@@ -1,0 +1,33 @@
+<?php
+/**
+ * socket测试控制器
+ */
+namespace App\Http\Controllers;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
+use GatewayClient\Gateway;
+
+class ChatController extends BaseController
+{
+
+	/**
+	 * 聊天首页
+	 * [index description]
+	 * @return [type] [description]
+	 */
+	public function index()
+	{
+		if ($request->isMethod('post')) {
+
+			Gateway::bindUid($client_id, $uid);
+			Gateway::sendToUid('aaa');
+
+
+
+		}
+		
+	}
+
+
+
+}

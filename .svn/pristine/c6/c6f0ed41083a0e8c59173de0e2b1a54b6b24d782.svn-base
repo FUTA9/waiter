@@ -1,0 +1,47 @@
+$(function(){
+	/**
+	 * 获取时间
+	 * [mydate description]
+	 * @type {Date}
+	 */
+	var time = function(){
+		var mydate = new Date();
+		return mydate.toLocaleString();
+	};
+
+	$('.time span').text(time());
+
+	/**
+	 * 监听回车事件
+	 * [monitor description]
+	 * @type {[type]}
+	 */
+	var monitor = $('#send');
+	monitor.keypress(function(e){
+		var key = e.which;
+		if (key == 13) { 
+			var str = $('#send').val();
+			var sendStr = "<li>\
+							<p class='time'>\
+								<span>"+time()+"</span>\
+							</p>\
+							<div class='self'>\
+								<img class='avatar' src='../public/images/2.png' width='30' height='30'>\
+								<div class='text'>"+str+"</div>\
+							</div\
+						</li>";
+			$('#send').val('');
+			$('.m-message ul').append(sendStr);
+			send(str);
+		}
+	});
+
+
+	function send (str) {
+		var type = str.replace('功能','');
+		alert(type);
+	}
+
+
+
+});

@@ -1,0 +1,9 @@
+<?php
+/**
+ * 自动义常量
+ */
+define('JS_PATH', __DIR__.'/js/');
+var_dump(JS_PATH);die;
+
+
+

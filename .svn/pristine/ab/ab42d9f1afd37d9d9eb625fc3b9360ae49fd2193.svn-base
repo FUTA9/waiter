@@ -1,0 +1,9 @@
+<?php
+/**
+ * 自动义常量
+ */
+define('PUBLIC_PATH', __DIR__.'/public/');
+var_dump(PUBLIC_PATH);die;
+
+
+

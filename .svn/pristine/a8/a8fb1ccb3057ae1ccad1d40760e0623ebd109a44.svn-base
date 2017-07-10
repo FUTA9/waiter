@@ -1,0 +1,40 @@
+$(function(){
+	var key = 'all';
+	var users = {};
+	var url = 'ws://120.77.36.158:8000';
+	var socket = new WebSocket(url);
+	console.log(socket);
+	/**
+	 * 检测链接  发送消息
+	 * [onopen description]
+	 * @return {[type]} [description]
+	 */
+	socket.onopen = function(){
+		//readyState为1说明链接已建议  可以通讯; 为0则链接建立失败; 为2则为 关闭握手 正在关闭连接; 为3则链接已经关闭或无法使用
+		if (socket.readyState == 1) {
+			socket.send('type=add&ming=futa');
+		}
+	};
+
+	/**
+	 * 退出链接
+	 * [onclose description]
+	 * @return {[type]} [description]
+	 */
+	socket.onclose = function(){
+		socket = false;
+	};
+
+
+	socket.onmessage = function(data){
+		console.log(data);
+		eval('var msg='+data.data);
+
+
+
+	};
+
+
+
+
+});

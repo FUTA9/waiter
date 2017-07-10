@@ -1,0 +1,3 @@
+var mydate = new Date();
+var time=mydate.toLocaleString();
+comsole.log(time);

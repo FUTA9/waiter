@@ -1,0 +1,11 @@
+$(function(){
+	var key = 'all';
+	var users = {};
+	var url = 'ws://120.77.36.158:8000';
+	var socket = new WebSocket(url);
+	console.log(socket);
+
+
+
+
+});

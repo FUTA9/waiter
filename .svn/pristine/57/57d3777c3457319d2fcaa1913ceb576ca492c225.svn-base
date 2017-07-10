@@ -1,0 +1,24 @@
+<?php
+/**
+ * socket测试控制器
+ */
+namespace App\Http\Controllers;
+use Illuminate\Routing\Controller as BaseController;
+use GatewayClient\Gateway;
+
+class ChatController extends BaseController
+{
+
+	/**
+	 * 聊天首页
+	 * [index description]
+	 * @return [type] [description]
+	 */
+	public function index()
+	{
+		Gateway::sendToAll('你他娘的就是老娘的master吗！');
+	}
+
+
+
+}
